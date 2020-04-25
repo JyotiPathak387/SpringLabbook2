@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean  class="org.capg.bean.SBU" id="sbu">
+
+  <property name="sbuCode" value="PES-BU"/>
+ <property name="sbuHead" value="Kiran Rao"/>
+ <property name="sbuName" value ="Product Engineering Serve"/>
+<property name="empList">
+<list>
+<ref bean ="emp1"/>
+<ref bean="emp2"/>
+</list>
+</property>
+</bean>
+ <bean class="org.capg.bean.Employee" id="emp1">
+
+     <property name="age" value="30"/>
+     <property name="employeeId" value="1234"/>
+     <property name="employeeName" value="Harriet"/>
+     <property name ="salary" value="40000"/>
+
+  </bean>
+
+   <bean  class="org.capg.bean.Employee" id="emp2">
+
+     <property name="age" value="36"/>
+     <property name="employeeId" value="1236"/>
+     <property name="employeeName" value="Potter"/>
+     <property name ="salary" value="40000"/>
+
+    
+ </bean>
+</beans>

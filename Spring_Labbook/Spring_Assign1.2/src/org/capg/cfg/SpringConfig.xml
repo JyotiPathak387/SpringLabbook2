@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+ <bean autowire="constructor" class="org.capg.bean.Employee" id="emp">
+
+ <constructor-arg name="age" value="30"/>
+ <constructor-arg name="employeeId" value="12345"/>
+ <constructor-arg name="employeeName" value ="Harriet"/>
+ <constructor-arg name="salary" value="40000"/>
+   <constructor-arg>
+
+   <bean  class="org.capg.bean.Sbu" id="sbu">
+
+     <property name="sbuId" value="101"/>
+     <property name="sbuName" value="Product Engineering Services"/>
+     <property name="sbuHead" value="kiran Rao"/>
+
+    </bean>
+  </constructor-arg>
+ </bean>
+</beans>
